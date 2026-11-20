@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model News {
+  id                Int      @id @default(autoincrement())
+  slug              String   @unique
+  title             String
+  summary           String
+  content           String
+  category          String   // GUATEMALA, CULTURA, DEPORTES, OPINION_W, INTERNACIONALES, CURIOSIDADES
+  subcategory       String?  // EJECUTIVO, LEGISLATIVO, JUDICIAL_MP, SEGURIDAD, ELECCIONES_2027
+  author            String
+  imageUrl          String
+  sourceUrl         String?
+  isFeatured        Boolean  @default(false)
+  directorValidated Boolean  @default(true)
+  validatedBy       String?  @default("Dirección General TGW")
+  views             Int      @default(0)
+  publishedAt       DateTime @default(now())
+  createdAt         DateTime @default(now())
+}
+
+model CulturalEvent {
+  id            Int      @id @default(autoincrement())
+  title         String
+  category      String   // MUSEO, CONCIERTO, EXPOSICION, CINE, ESCENICA
+  dateText      String
+  timeText      String
+  venue         String
+  location      String
+  description   String
+  price         String
+  imageUrl      String
+  isRecommended Boolean  @default(true)
+  createdAt     DateTime @default(now())
+}
+
+model RadioProgram {
+  id          Int      @id @default(autoincrement())
+  channel     String   // TGW_FM, TGW_TV
+  name        String
+  hosts       String
+  schedule    String
+  days        String
+  description String
+  category    String
+  isLiveNow   Boolean  @default(false)
+}
+
+model HistoricalArchive {
+  id            Int      @id @default(autoincrement())
+  title         String
+  type          String   // CONALFA, PODCAST, FONOTECA
+  period        String
+  episodesCount Int
+  description   String
+  audioDuration String
+  badgeText     String
+}
+
+model ProcedureSubmission {
+  id            Int      @id @default(autoincrement())
+  trackingCode  String   @unique
+  procedureType String
+  applicantName String
+  dpiOrNit      String
+  email         String
+  phone         String
+  details       String
+  status        String   @default("EN_REVISION")
+  createdAt     DateTime @default(now())
+}
+
+model CitizenReport {
+  id           Int      @id @default(autoincrement())
+  trackingCode String   @unique
+  reportType   String   // INFORMACION_PUBLICA, QUEJA_DENUNCIA
+  citizenName  String
+  email        String
+  subject      String
+  message      String
+  isAnonymous  Boolean  @default(false)
+  status       String   @default("RECIBIDO")
+  createdAt    DateTime @default(now())
+}

@@ -1,0 +1,516 @@
+// Animaciones clave de la cabecera TGW
+@keyframes pulseLiveRed {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 57, 53, 0.85);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px rgba(230, 57, 53, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 57, 53, 0);
+  }
+}
+
+@keyframes eqBarBounce {
+  0%, 100% {
+    height: 6px;
+  }
+  25% {
+    height: 19px;
+  }
+  50% {
+    height: 10px;
+  }
+  75% {
+    height: 22px;
+  }
+}
+
+// Barra Superior Institucional (Top Bar)
+.tgw-topbar {
+  background: linear-gradient(90deg, #091d33 0%, #0d2642 50%, #091d33 100%);
+  color: #ffffff;
+  padding: 9px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__container {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+}
+
+// Botón estético de 3 líneas horizontales (Menú Institucional: Sobre nosotros, Historia, Misión, Visión, Valores)
+.hamburger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--tgw-font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.22s ease;
+
+  &:hover {
+    background: rgba(30, 111, 217, 0.35);
+    border-color: #4b97ff;
+    transform: translateY(-1px);
+  }
+
+  &__lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18px;
+    height: 12px;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+
+      &:nth-child(2) {
+        width: 78%;
+        background: #f6884e;
+      }
+    }
+  }
+
+  &:hover &__lines span:nth-child(2) {
+    width: 100%;
+  }
+}
+
+// Pastilla COBERTURA NACIONAL con punto rojo pulsante (Live Badge)
+.coverage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(18, 57, 98, 0.75);
+  border: 1px solid #245b94;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--tgw-red-live);
+    display: inline-block;
+    animation: pulseLiveRed 1.5s infinite ease-in-out;
+    flex-shrink: 0;
+  }
+
+  &__wave {
+    color: #3da0ff;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+// Pastilla de Fecha
+.date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px 15px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #e3edf8;
+
+  svg {
+    color: #4f9cf9;
+  }
+}
+
+// Pastilla Tipo de Cambio
+.exchange-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 68, 63, 0.65);
+  border: 1px solid #217a65;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  &__icon {
+    color: #38d9a9;
+    display: inline-flex;
+  }
+
+  &__label {
+    color: #38d9a9;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    color: #ffffff;
+    font-weight: 800;
+  }
+
+  &__sep {
+    color: #38d9a9;
+  }
+}
+
+// Pastilla Certificado SSL en Top Bar
+.ssl-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(21, 94, 63, 0.45);
+  border: 1px solid rgba(56, 217, 169, 0.45);
+  color: #72f2c7;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(28, 125, 84, 0.7);
+    color: #ffffff;
+  }
+}
+
+// Botón Modo Oscuro
+.theme-toggle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #96b8db;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    transform: rotate(12deg);
+  }
+}
+
+// Cabecera Principal (Hero Header con malla de puntos y resplandor radial)
+.tgw-hero-header {
+  position: relative;
+  background-color: var(--tgw-bg-hero);
+  background-image:
+    radial-gradient(circle at 50% 48%, rgba(30, 111, 217, 0.09) 0%, rgba(30, 111, 217, 0) 62%),
+    radial-gradient(var(--tgw-dot-color) 1.15px, transparent 1.15px);
+  background-size: 100% 100%, 22px 22px;
+  padding: 36px 20px 30px;
+  text-align: center;
+  border-bottom: 1px solid var(--tgw-border);
+  overflow: hidden;
+
+  &__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+}
+
+// Bloque Dual de Logos: TGW + Gobierno / Ministerio de Comunicaciones, Infraestructura y Vivienda
+.tgw-brand-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+
+  &__divider {
+    width: 1px;
+    height: 70px;
+    background: var(--tgw-border);
+  }
+}
+
+.tgw-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+
+  &__svg {
+    width: 240px;
+    height: auto;
+    display: block;
+  }
+}
+
+.civ-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+
+  &__crest {
+    width: 66px;
+    height: 66px;
+    flex-shrink: 0;
+  }
+
+  &__bar {
+    width: 2.5px;
+    height: 60px;
+    background: #0e6cc4;
+    border-radius: 2px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.22;
+    color: var(--tgw-text-primary);
+
+    span.ministry-label {
+      font-size: 0.86rem;
+      font-weight: 400;
+      color: var(--tgw-text-secondary);
+    }
+
+    strong {
+      font-size: 1.02rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+// Pastilla Reproductor AL AIRE con barras en movimiento
+.on-air-player {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--tgw-bg-surface);
+  border: 1px solid var(--tgw-border);
+  padding: 8px 22px 8px 10px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(12, 34, 59, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(12, 34, 59, 0.12);
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #f6884e 0%, #ea6422 100%);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(234, 100, 34, 0.38);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 16px rgba(234, 100, 34, 0.5);
+    }
+  }
+
+  &__bars {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 3.5px;
+    height: 22px;
+    padding: 0 2px;
+
+    .bar {
+      width: 3.2px;
+      border-radius: 3px;
+      animation: eqBarBounce 1.05s infinite ease-in-out;
+
+      &:nth-child(1) {
+        background: var(--tgw-blue-600);
+        height: 16px;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        background: var(--tgw-orange-500);
+        height: 8px;
+        animation-delay: 0.22s;
+      }
+      &:nth-child(3) {
+        background: var(--tgw-blue-600);
+        height: 19px;
+        animation-delay: 0.41s;
+      }
+      &:nth-child(4) {
+        background: var(--tgw-orange-500);
+        height: 12px;
+        animation-delay: 0.15s;
+      }
+      &:nth-child(5) {
+        background: var(--tgw-blue-600);
+        height: 21px;
+        animation-delay: 0.33s;
+      }
+    }
+
+    &.is-paused .bar {
+      animation-duration: 2.4s;
+      opacity: 0.75;
+    }
+  }
+
+  &__live-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--tgw-red-live);
+    animation: pulseLiveRed 1.5s infinite ease-in-out;
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--tgw-text-primary);
+    text-transform: uppercase;
+  }
+}
+
+// Título Principal LA VOZ DE GUATEMALA
+.tgw-main-title {
+  font-size: clamp(2.1rem, 4.7vw, 3.45rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.08;
+  margin: 0;
+  color: var(--tgw-text-primary);
+  text-transform: uppercase;
+
+  span.highlight {
+    color: var(--tgw-blue-500);
+  }
+}
+
+// Frecuencias 107.3 FM • 107.5 FM con líneas degradadas laterales
+.tgw-frequency-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 450px;
+
+  &__line-left {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(30, 111, 217, 0) 0%, #1e6fd9 100%);
+  }
+
+  &__badge {
+    background: #0c223b;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    padding: 7px 18px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(12, 34, 59, 0.2);
+    white-space: nowrap;
+  }
+
+  &__line-right {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, #f06d2b 0%, rgba(240, 109, 43, 0) 100%);
+  }
+}
+
+// Botones de Redes Sociales
+.tgw-socials-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+
+  .social-card {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--tgw-bg-surface);
+    border: 1px solid var(--tgw-border);
+    color: var(--tgw-text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: var(--tgw-shadow-sm);
+    transition: all 0.2s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--tgw-blue-500);
+      color: var(--tgw-blue-500);
+      box-shadow: var(--tgw-shadow-md);
+    }
+  }
+}

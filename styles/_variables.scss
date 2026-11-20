@@ -1,0 +1,42 @@
+:root {
+  --tgw-navy-900: #08182b;
+  --tgw-navy-800: #0c223b;
+  --tgw-navy-700: #133254;
+  --tgw-blue-600: #185fb8;
+  --tgw-blue-500: #1e6fd9;
+  --tgw-blue-400: #3b89ef;
+  --tgw-blue-100: #e7f1fd;
+  --tgw-orange-500: #f06d2b;
+  --tgw-orange-400: #f6884e;
+  --tgw-red-live: #e63935;
+  --tgw-emerald-500: #29c794;
+  --tgw-bg-main: #f4f8fc;
+  --tgw-bg-surface: #ffffff;
+  --tgw-bg-hero: #f9fcff;
+  --tgw-dot-color: #d7e5f5;
+  --tgw-text-primary: #0b2239;
+  --tgw-text-secondary: #415870;
+  --tgw-text-muted: #6c8299;
+  --tgw-border: #d8e4f0;
+  --tgw-shadow-sm: 0 4px 12px rgba(11, 34, 57, 0.05);
+  --tgw-shadow-md: 0 10px 28px rgba(11, 34, 57, 0.09);
+  --tgw-shadow-lg: 0 18px 42px rgba(11, 34, 57, 0.14);
+  --tgw-radius-sm: 8px;
+  --tgw-radius-md: 14px;
+  --tgw-radius-lg: 22px;
+  --tgw-font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.dark-theme {
+  --tgw-bg-main: #071322;
+  --tgw-bg-surface: #0e2036;
+  --tgw-bg-hero: #0a192c;
+  --tgw-dot-color: #183252;
+  --tgw-text-primary: #f1f6fc;
+  --tgw-text-secondary: #b3c7dc;
+  --tgw-text-muted: #7f9ab7;
+  --tgw-border: #1d3654;
+  --tgw-blue-100: #132c4a;
+  --tgw-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --tgw-shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
+}

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal Oficial de Radio Nacional TGW «La Voz de Guatemala» 107.3 FM y 107.5 FM - Ministerio de Comunicaciones, Infraestructura y Vivienda." />
+  <title>Radio Nacional TGW | La Voz de Guatemala • 107.3 FM • 107.5 FM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR INSTITUCIONAL (TOP BAR) -->
+  <header class="tgw-topbar" role="banner">
+    <div class="tgw-topbar__container">
+      <div class="tgw-topbar__left">
+        <!-- Menú de tres líneas horizontales en punto visual agradable y estético -->
+        <button class="hamburger-btn" id="openDrawerBtn" aria-label="Abrir menú institucional Sobre Nosotros e Historia de TGW">
+          <span class="hamburger-btn__lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>NOSOTROS / HISTORIA W</span>
+        </button>
+
+        <!-- COBERTURA NACIONAL con punto rojo en indicador pulsante (Live Badge) -->
+        <div class="coverage-pill" title="Transmisión nacional activa en 107.3 FM y 107.5 FM">
+          <span class="coverage-pill__dot" aria-hidden="true"></span>
+          <span class="coverage-pill__wave" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+              <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+          </span>
+          <span>COBERTURA NACIONAL</span>
+        </div>
+
+        <span class="tgw-topbar__divider" aria-hidden="true"></span>
+
+        <!-- Fecha Institucional -->
+        <div class="date-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span id="currentDateDisplay">Jueves, 19 De Noviembre De 2026</span>
+        </div>
+      </div>
+
+      <div class="tgw-topbar__right">
+        <!-- Tipo de Cambio -->
+        <div class="exchange-pill">
+          <span class="exchange-pill__icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+              <line x1="12" y1="18" x2="12" y2="6"></line>
+            </svg>
+          </span>
+          <span class="exchange-pill__label">TIPO DE CAMBIO:</span>
+          <span class="exchange-pill__value" id="exchangeRateValue">Q 7.72</span>
+          <span class="exchange-pill__sep">×</span>
+          <span class="exchange-pill__value">$1.00 USD</span>
+        </div>
+
+        <!-- Certificado de Seguridad SSL/TLS Activo -->
+        <button class="ssl-pill-btn" id="openSslModalBtn" title="Ver Certificado de Seguridad X.509 SSL/TLS de Producción">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>SSL SEGURO</span>
+        </button>
+
+        <!-- Botón de Modo Oscuro -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Alternar modo oscuro">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABECERA PRINCIPAL (HERO HEADER TGW) -->
+  <section class="tgw-hero-header">
+    <div class="tgw-hero-header__inner">
+
+      <!-- Logos Institucionales: TGW + Gobierno de Guatemala / Ministerio de Comunicaciones, Infraestructura y Vivienda -->
+      <div class="tgw-brand-lockup">
+        <!-- Logo TGW La voz de Guatemala | 107.3 fm -->
+        <a href="#noticias-w" class="tgw-logo-block" aria-label="Radio Nacional TGW La Voz de Guatemala 107.3 FM">
+          <svg class="tgw-logo-block__svg" viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="tgwBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#338ef7" />
+                <stop offset="55%" stop-color="#1560bd" />
+                <stop offset="100%" stop-color="#071e38" />
+              </linearGradient>
+            </defs>
+            <!-- Arco de ondas naranjas de TGW -->
+            <ellipse cx="44" cy="22" rx="7" ry="3.8" transform="rotate(-18 44 22)" fill="#f27435" />
+            <ellipse cx="62" cy="15" rx="8.5" ry="4.2" transform="rotate(-10 62 15)" fill="#f27435" />
+            <ellipse cx="83" cy="13" rx="7.5" ry="3.8" transform="rotate(-4 83 13)" fill="#f27435" />
+            <ellipse cx="101" cy="14" rx="5.5" ry="2.8" fill="#f27435" />
+            <ellipse cx="26" cy="33" rx="6.5" ry="3.8" transform="rotate(-25 26 33)" fill="#f27435" />
+            <ellipse cx="43" cy="29" rx="5.5" ry="3.2" transform="rotate(-15 43 29)" fill="#f27435" />
+            <ellipse cx="60" cy="25" rx="4.5" ry="2.6" transform="rotate(-8 60 25)" fill="#f27435" />
+            <ellipse cx="18" cy="48" rx="6" ry="3.8" transform="rotate(-28 18 48)" fill="#f27435" />
+            <ellipse cx="33" cy="43" rx="4.5" ry="2.8" transform="rotate(-20 33 43)" fill="#f27435" />
+            <ellipse cx="21" cy="64" rx="5.8" ry="3.6" transform="rotate(-25 21 64)" fill="#f27435" />
+            <ellipse cx="30" cy="79" rx="5.5" ry="3.4" transform="rotate(-20 30 79)" fill="#f27435" />
+            <ellipse cx="44" cy="91" rx="5" ry="3" transform="rotate(-15 44 91)" fill="#f27435" />
+            <ellipse cx="59" cy="100" rx="4.2" ry="2.5" transform="rotate(-10 59 100)" fill="#f27435" />
+
+            <!-- Siglas TGW -->
+            <text x="64" y="76" font-family="'Plus Jakarta Sans', sans-serif" font-size="68" font-weight="900" font-style="italic" letter-spacing="-2" fill="url(#tgwBlueGrad)">TGW</text>
+            <!-- Subtítulo La voz de Guatemala | 107.3 fm -->
+            <text x="68" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-size="13.5" font-weight="700" fill="#185fb8">La voz de Guatemala <tspan fill="#0c223b">|</tspan> <tspan fill="#f06d2b" font-weight="800">107.3 fm</tspan></text>
+          </svg>
+        </a>
+
+        <div class="tgw-brand-lockup__divider" aria-hidden="true"></div>
+
+        <!-- Logo Gobierno de la República de Guatemala / Ministerio de Comunicaciones, Infraestructura y Vivienda -->
+        <div class="civ-logo-block">
+          <svg class="civ-logo-block__crest" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#102a45" stroke-width="1.8" stroke-dasharray="2 2" />
+            <circle cx="50" cy="50" r="34" fill="none" stroke="#102a45" stroke-width="1.5" />
+            <path d="M32 45 C32 62, 50 72, 50 72 C50 72, 68 62, 68 45" fill="none" stroke="#102a45" stroke-width="2.2" />
+            <rect x="41" y="38" width="18" height="20" rx="2" fill="none" stroke="#102a45" stroke-width="2" />
+            <line x1="44" y1="44" x2="56" y2="44" stroke="#102a45" stroke-width="1.8" />
+            <line x1="44" y1="49" x2="56" y2="49" stroke="#102a45" stroke-width="1.8" />
+            <line x1="44" y1="54" x2="52" y2="54" stroke="#102a45" stroke-width="1.8" />
+            <circle cx="50" cy="31" r="4.5" fill="#102a45" />
+            <text x="50" y="15" text-anchor="middle" font-size="6.5" font-weight="800" fill="#102a45" letter-spacing="0.8">GOBIERNO DE LA REPÚBLICA</text>
+            <text x="50" y="92" text-anchor="middle" font-size="7" font-weight="800" fill="#102a45" letter-spacing="1.2">GUATEMALA</text>
+          </svg>
+          <div class="civ-logo-block__bar" aria-hidden="true"></div>
+          <div class="civ-logo-block__text">
+            <span class="ministry-label">Ministerio de</span>
+            <strong>Comunicaciones,</strong>
+            <strong>Infraestructura y</strong>
+            <strong>Vivienda</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- REPRODUCTOR CENTRAL "AL AIRE" CON BARRAS EN MOVIMIENTO -->
+      <div class="on-air-player" role="region" aria-label="Reproductor en vivo de Radio TGW">
+        <button class="on-air-player__btn" id="onAirToggleBtn" aria-label="Pausar o reproducir señal en vivo 107.3 FM">
+          <svg id="onAirIconPause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+            <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+          </svg>
+          <svg id="onAirIconPlay" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <polygon points="6 4 20 12 6 20 6 4"></polygon>
+          </svg>
+        </button>
+
+        <!-- Barras de AL AIRE en movimiento continuo -->
+        <div class="on-air-player__bars" id="equalizerBars" aria-hidden="true">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <span class="on-air-player__live-dot" aria-hidden="true"></span>
+        <span class="on-air-player__label" id="onAirStatusText">AL AIRE</span>
+      </div>
+
+      <!-- TÍTULO PRINCIPAL: LA VOZ DE GUATEMALA -->
+      <h1 class="tgw-main-title">
+        LA VOZ DE <span class="highlight">GUATEMALA</span>
+      </h1>
+
+      <!-- FRECUENCIAS: 107.3 FM • 107.5 FM -->
+      <div class="tgw-frequency-row">
+        <span class="tgw-frequency-row__line-left" aria-hidden="true"></span>
+        <span class="tgw-frequency-row__badge">107.3 FM • 107.5 FM</span>
+        <span class="tgw-frequency-row__line-right" aria-hidden="true"></span>
+      </div>
+
+      <!-- REDES SOCIALES OFICIALES DE TGW -->
+      <div class="tgw-socials-row" aria-label="Redes sociales oficiales de Radio TGW">
+        <!-- X / Twitter -->
+        <a href="https://x.com/TGWdigital" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="X (Twitter) TGW">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/radiotgw" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Facebook Radio TGW">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/radiotgw" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Instagram Radio TGW">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@radiotgw" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="TikTok Radio TGW">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <!-- Twitch -->
+        <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Stream Multimedia TGW">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path></svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="YouTube Radio TGW">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <!-- Cabina / Contacto Directo -->
+        <a href="#voz-ciudadana" class="social-card" aria-label="Contacto Cabina y Voz Ciudadana">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PESTAÑAS UBICADAS DEBAJO DE LA CABECERA (SECCIONES) -->
+  <nav class="tgw-nav-tabs" aria-label="Secciones principales de Radio Nacional TGW">
+    <div class="tgw-nav-tabs__container">
+
+      <!-- 1. NOTICIAS W (con Guatemala desplegable: Ejecutivo, Legislativo, Judicial - MP, Seguridad, Elecciones 2027 + Cultura, Arte y Música, Deportes, OpiniónW) -->
+      <div class="nav-item" id="navNoticiasW">
+        <button class="nav-item__btn active" data-target="noticias-w" data-filter-cat="TODAS">
+          <span>NOTICIAS W</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="nav-item__dropdown">
+          <!-- Guatemala (click y desplegar) -->
+          <div class="dropdown-subgroup">
+            <button type="button" class="dropdown-subgroup__toggle" id="toggleGuatemalaSubmenu">
+              <span>🇬🇹 Guatemala (Click y desplegar)</span>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="dropdown-subgroup__list expanded" id="guatemalaSubmenuList">
+              <button type="button" class="dropdown-link js-news-filter" data-category="GUATEMALA" data-subcategory="EJECUTIVO">
+                <span>Ejecutivo</span>
+              </button>
+              <button type="button" class="dropdown-link js-news-filter" data-category="GUATEMALA" data-subcategory="LEGISLATIVO">
+                <span>Legislativo</span>
+              </button>
+              <button type="button" class="dropdown-link js-news-filter" data-category="GUATEMALA" data-subcategory="JUDICIAL_MP">
+                <span>Judicial – MP</span>
+              </button>
+              <button type="button" class="dropdown-link js-news-filter" data-category="GUATEMALA" data-subcategory="SEGURIDAD">
+                <span>Seguridad</span>
+              </button>
+              <button type="button" class="dropdown-link js-news-filter" data-category="GUATEMALA" data-subcategory="ELECCIONES_2027">
+                <span>Elecciones 2027</span>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="dropdown-link js-news-filter" data-category="CULTURA" data-subcategory="TODAS">
+            <span>Cultura, Arte y Música</span>
+          </button>
+          <button type="button" class="dropdown-link js-news-filter" data-category="DEPORTES" data-subcategory="TODAS">
+            <span>Deportes</span>
+          </button>
+          <button type="button" class="dropdown-link js-news-filter" data-category="OPINION_W" data-subcategory="TODAS">
+            <span>OpiniónW</span>
+            <span class="dropdown-link__badge">Validación DG</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. NOTICIAS W INTERNACIONALES -->
+      <div class="nav-item">
+        <button class="nav-item__btn js-news-filter" data-category="INTERNACIONALES" data-subcategory="TODAS">
+          <span>NOTICIAS W INTERNACIONALES</span>
+        </button>
+      </div>
+
+      <!-- 3. PROGRAMACIÓN W (click y desplegar: TGW FM y TGW TV) -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#programacion-w">
+          <span>PROGRAMACIÓN W</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="nav-item__dropdown">
+          <button type="button" class="dropdown-link js-prog-filter" data-channel="TGW_FM">
+            <span>📻 TGW FM (107.3 • 107.5 FM)</span>
+            <span class="dropdown-link__badge">En Vivo</span>
+          </button>
+          <button type="button" class="dropdown-link js-prog-filter" data-channel="TGW_TV">
+            <span>📺 TGW TV (Señal Digital)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. CURIOSIDADES -->
+      <div class="nav-item">
+        <button class="nav-item__btn js-news-filter" data-category="CURIOSIDADES" data-subcategory="TODAS">
+          <span>CURIOSIDADES</span>
+        </button>
+      </div>
+
+      <!-- 5. AGENDA CULTURAL -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#agenda-cultural">
+          <span>AGENDA CULTURAL</span>
+        </button>
+      </div>
+
+      <!-- 6. ACADEMIA DE LOCUCIÓN -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#academia-locucion">
+          <span>ACADEMIA DE LOCUCIÓN</span>
+        </button>
+      </div>
+
+      <!-- 7. HUELLAS W -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#huellas-w">
+          <span>HUELLAS W</span>
+        </button>
+      </div>
+
+      <!-- 8. TRÁMITES A TU FAVOR (Despliega las 6 subsecciones de trámites en línea) -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#tramites-favor">
+          <span>TRÁMITES A TU FAVOR</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="nav-item__dropdown align-right">
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Registro de Locutor">
+            <span>1. Registro de Locutor</span>
+          </button>
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Actualización del Registro de Locutor">
+            <span>2. Actualización del Registro de Locutor</span>
+          </button>
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Registro de Técnicos en Radiocomunicación">
+            <span>3. Registro de Técnicos en Radiocomunicación</span>
+          </button>
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Registro de Desaduanaje (Liberación Aduanera)">
+            <span>4. Registro de Desaduanaje (Liberación Aduanera)</span>
+          </button>
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Registro de Comerciales">
+            <span>5. Registro de Comerciales</span>
+          </button>
+          <button type="button" class="dropdown-link js-open-procedure" data-proc="Registro de Radioperiódicos, Noticieros y Programas de Comentarios">
+            <span>6. Registro de Radioperiódicos, Noticieros y Programas de Comentarios</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 9. VOZ CIUDADANA (Información Pública, Quejas y Denuncias, SINACIG) -->
+      <div class="nav-item">
+        <button class="nav-item__btn" data-scroll="#voz-ciudadana">
+          <span>VOZ CIUDADANA</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="nav-item__dropdown align-right">
+          <button type="button" class="dropdown-link js-citizen-action" data-type="INFORMACION_PUBLICA">
+            <span>📄 Información Pública</span>
+          </button>
+          <button type="button" class="dropdown-link js-citizen-action" data-type="QUEJA_DENUNCIA">
+            <span>📢 Quejas y Denuncias</span>
+          </button>
+          <button type="button" class="dropdown-link" data-scroll="#sinacig-box">
+            <span>🏛️ SINACIG (Transparencia y Control)</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MENÚ DESPLEGABLE DE TRES LÍNEAS HORIZONTALES (SOBRE NOSOTROS, HISTORIA DE TGW, MISIÓN, VISIÓN, VALORES) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="institutional-drawer" id="institutionalDrawer" aria-label="Información Institucional de Radio Nacional TGW">
+    <div class="institutional-drawer__header">
+      <div>
+        <h2>RADIO NACIONAL TGW • 107.3 / 107.5 FM</h2>
+        <p>Patrimonio Cultural de la Nación • Fundada el 15 de septiembre de 1930</p>
+      </div>
+      <button class="institutional-drawer__close" id="closeDrawerBtn" aria-label="Cerrar menú institucional">✕</button>
+    </div>
+
+    <div class="institutional-drawer__nav">
+      <button type="button" class="active" data-inst-tab="all">Todo</button>
+      <button type="button" data-inst-tab="sobre-nosotros">Sobre nosotros</button>
+      <button type="button" data-inst-tab="historia">Historia de TGW</button>
+      <button type="button" data-inst-tab="mision-vision">Misión y Visión</button>
+      <button type="button" data-inst-tab="valores">Valores</button>
+    </div>
+
+    <div class="institutional-drawer__body">
+      <!-- Sobre Nosotros -->
+      <article class="inst-card" data-inst-section="sobre-nosotros">
+        <span class="inst-card__badge">Identidad Institucional</span>
+        <h3>Sobre nosotros</h3>
+        <p>
+          Estás en el portal oficial de Radio Nacional TGW, «La Voz de Guatemala», primera emisora del país desde el 15 de septiembre de 1930. A través de las frecuencias 107.3 y 107.5 FM y nuestras plataformas digitales, llevamos cultura, memoria sonora e información veraz a los guatemaltecos dentro y fuera de nuestras fronteras, combinando tradición histórica con inmediatez tecnológica.
+        </p>
+      </article>
+
+      <!-- Historia de TGW -->
+      <article class="inst-card orange-accent" data-inst-section="historia">
+        <span class="inst-card__badge">Legado desde 1930</span>
+        <h3>Historia de TGW</h3>
+        <p>
+          Todo empezó el 15 de septiembre de 1930 en la zona 1 de la capital, cuando Julio Caballeros de Paz impulsó la radio durante la administración del entonces presidente Lázaro Chacón. Tras constituirse la Unión Internacional de Telecomunicaciones en la década de 1920 para asignar códigos únicos, a Guatemala le tocó TG y a la primera estación el distintivo W, formando las siglas TGW, a las que primero se sumó Radio Nacional de Guatemala y luego La Voz de Guatemala.
+        </p>
+        <p>
+          En 1937, por disposición del presidente Jorge Ubico, la emisora pasó al tercer nivel de la Tipografía Nacional, con estudios especiales, impulsando la expansión radial del país. Ese mismo año nació el histórico Diario del Aire, primer radioperiódico guatemalteco, donde Miguel Ángel Asturias combinó noticias, frases poéticas y filosóficas y cuñas pioneras de publicidad radial.
+        </p>
+        <p>
+          También destaca la icónica cabina de cristal “Martha Bolaños de Prado”, escenario de históricos mensajes anunciados en golpes de Estado de los años 70 y 80, así como del impulso a artistas de proyección nacional e internacional.
+        </p>
+        <p>
+          El 18 de mayo de 2012, mediante el Acuerdo Ministerial 459-2012, TGW fue distinguida como Patrimonio Cultural de la Nación en 2012. Un legado histórico que hasta la fecha late con fuerza en su fonoteca, su museo histórico Otto René Mancilla, su teatro de bolsillo Mildred Chávez de Almorza y su fonoteca, espacios que preservan el amplio legado radiofónico de la radio nacional del país.
+        </p>
+      </article>
+
+      <!-- Misión -->
+      <article class="inst-card" data-inst-section="mision-vision">
+        <span class="inst-card__badge">Propósito</span>
+        <h3>Misión</h3>
+        <p>
+          Somos ejemplo en cumplimiento de la ley y fortalecer la identidad nacional, construyendo ciudadanía, informando, educando, ofreciendo y entreteniendo a los guatemaltecos dentro y fuera de nuestras fronteras, a través de radioemisoras, en plataforma digital y televisión.
+        </p>
+      </article>
+
+      <!-- Visión -->
+      <article class="inst-card" data-inst-section="mision-vision">
+        <span class="inst-card__badge">Proyección</span>
+        <h3>Visión</h3>
+        <p>
+          Velar por el cumplimiento de la ley de radiodifusión y televisión de Guatemala, influenciando e inspirando a todos los medios de comunicación a promover la identidad nacional, exaltando los valores culturales, con espacios educativos, dando información veraz y objetiva con el fin de fortalecer el nacionalismo.
+        </p>
+      </article>
+
+      <!-- Valores -->
+      <article class="inst-card orange-accent" data-inst-section="valores">
+        <span class="inst-card__badge">Ética Pública</span>
+        <h3>Valores</h3>
+        <div class="values-grid">
+          <div class="value-pill"><span class="dot"></span>Integridad</div>
+          <div class="value-pill"><span class="dot"></span>Honestidad</div>
+          <div class="value-pill"><span class="dot"></span>Respeto y tolerancia</div>
+          <div class="value-pill"><span class="dot"></span>Equidad</div>
+          <div class="value-pill"><span class="dot"></span>Responsabilidad</div>
+          <div class="value-pill"><span class="dot"></span>Disciplina</div>
+          <div class="value-pill"><span class="dot"></span>Lealtad</div>
+          <div class="value-pill"><span class="dot"></span>Transparencia</div>
+        </div>
+      </article>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL DEL PORTAL -->
+  <main class="tgw-main-container">
+
+    <!-- SECCIÓN 1: NOTICIAS W, INTERNACIONALES Y CURIOSIDADES (CONECTADO A BASE DE DATOS PRISMA) -->
+    <section id="noticias-w">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● DIARIO DEL AIRE • BASE DE DATOS EN TIEMPO REAL</span>
+          <h2 id="newsSectionHeading">Noticias W — Cobertura Nacional e Internacional</h2>
+          <p>Información oficial, veraz y objetiva almacenada en base de datos Prisma desde la sala de redacción de Radio Nacional TGW.</p>
+        </div>
+        <button class="btn-primary orange" id="openNewArticleModalBtn">
+          <span>+ Publicar Noticia / OpiniónW</span>
+        </button>
+      </div>
+
+      <!-- Barra de filtros principales -->
+      <div class="news-toolbar">
+        <div class="news-toolbar__pills">
+          <button type="button" class="filter-chip active js-news-filter" data-category="TODAS" data-subcategory="TODAS">Todas</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="GUATEMALA" data-subcategory="TODAS">🇬🇹 Guatemala</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="CULTURA" data-subcategory="TODAS">Cultura, Arte y Música</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="DEPORTES" data-subcategory="TODAS">Deportes</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="OPINION_W" data-subcategory="TODAS">OpiniónW (Dirección General)</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="INTERNACIONALES" data-subcategory="TODAS">Noticias W Internacionales</button>
+          <button type="button" class="filter-chip js-news-filter" data-category="CURIOSIDADES" data-subcategory="TODAS">Curiosidades</button>
+        </div>
+
+        <div class="news-toolbar__actions">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="newsSearchInput" placeholder="Buscar noticia en TGW..." aria-label="Buscar noticia" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Subcategorías desplegables de Guatemala -->
+      <div class="subfilters-bar" id="guatemalaSubfiltersBar">
+        <span class="subfilters-bar__label">Guatemala • Secciones:</span>
+        <button type="button" class="filter-chip sub-chip active js-news-filter" data-category="GUATEMALA" data-subcategory="TODAS">Todas Guatemala</button>
+        <button type="button" class="filter-chip sub-chip js-news-filter" data-category="GUATEMALA" data-subcategory="EJECUTIVO">Ejecutivo</button>
+        <button type="button" class="filter-chip sub-chip js-news-filter" data-category="GUATEMALA" data-subcategory="LEGISLATIVO">Legislativo</button>
+        <button type="button" class="filter-chip sub-chip js-news-filter" data-category="GUATEMALA" data-subcategory="JUDICIAL_MP">Judicial – MP</button>
+        <button type="button" class="filter-chip sub-chip js-news-filter" data-category="GUATEMALA" data-subcategory="SEGURIDAD">Seguridad</button>
+        <button type="button" class="filter-chip sub-chip js-news-filter" data-category="GUATEMALA" data-subcategory="ELECCIONES_2027">Elecciones 2027</button>
+      </div>
+
+      <!-- Aviso de Validación Editorial cuando se selecciona OpiniónW -->
+      <div class="director-validation-banner" id="opinionValidationBanner" style="display: none;">
+        <div class="director-validation-banner__info">
+          <h4>🛡️ OpiniónW — Espacio Editorial Sujeto a Validación del Director General de la Radio</h4>
+          <p>Toda columna publicada en OpiniónW cuenta con la revisión y aval de la Dirección General de Radio Nacional TGW para garantizar ética, pluralidad y apego a la ley.</p>
+        </div>
+        <button type="button" class="btn-primary orange" id="openOpinionSubmitBtn">Enviar Columna a Validación</button>
+      </div>
+
+      <!-- Contenedor Dinámico de Noticias desde Prisma -->
+      <div class="news-grid" id="newsGridContainer">
+        <!-- Renderizado dinámicamente desde /api/news -->
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: PROGRAMACIÓN W (TGW FM & TGW TV) -->
+    <section id="programacion-w">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● PARRILLA OFICIAL • RADIO Y TELEVISIÓN</span>
+          <h2>Programación W — TGW FM (107.3 • 107.5) y TGW TV</h2>
+          <p>Consulta los horarios de nuestros radioperiódicos Diario del Aire, programas de marimba como Chapinlandia y emisiones televisivas.</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="filter-chip active js-prog-filter" data-channel="ALL">Todos</button>
+          <button type="button" class="filter-chip js-prog-filter" data-channel="TGW_FM">📻 TGW FM</button>
+          <button type="button" class="filter-chip js-prog-filter" data-channel="TGW_TV">📺 TGW TV</button>
+        </div>
+      </div>
+      <div class="cards-grid-3" id="programsGridContainer"></div>
+    </section>
+
+    <!-- SECCIÓN 3: AGENDA CULTURAL -->
+    <section id="agenda-cultural">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● CARTELERA NACIONAL ACTUALIZADA</span>
+          <h2>Agenda Cultural</h2>
+          <p>Una cartelera actualizada con próximos eventos de museos, conciertos, exposiciones de arte, festivales de cine y presentaciones escénicas recomendadas en el país, entre otros espacios.</p>
+        </div>
+      </div>
+      <div class="cards-grid-3" id="culturalAgendaContainer"></div>
+    </section>
+
+    <!-- SECCIÓN 4: ACADEMIA DE LOCUCIÓN -->
+    <section id="academia-locucion">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● FORMACIÓN RADIOFÓNICA Y VOZ PROFESIONAL</span>
+          <h2>Academia de Locución TGW</h2>
+          <p>Escuela histórica de formación en locución, dicción, producción radial, ética periodística y conducción frente al micrófono de «La Voz de Guatemala».</p>
+        </div>
+      </div>
+      <div class="cards-grid-3">
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Módulo I • Básico e Intermedio</span>
+            <span class="feature-box__tag orange">Inscripciones Abiertas</span>
+          </div>
+          <h3>Técnica Vocal, Respiración Diafragmática y Dicción</h3>
+          <p>Entrenamiento práctico en impostación de la voz, articulación fonética, lectura interpretativa y cuidado de las cuerdas vocales impartido por maestros locutores de TGW.</p>
+          <div class="feature-box__meta">
+            <span>📍 Estudios TGW - 3er Nivel Tipografía Nacional</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Locutor">Postularme</button>
+          </div>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Módulo II • Periodismo Radial</span>
+            <span class="feature-box__tag">Práctica en Cabina</span>
+          </div>
+          <h3>Locución Informativa y Conducción al Estilo Diario del Aire</h3>
+          <p>Redacción para el oído, improvisación responsable, cobertura de emergencias en cadena nacional y manejo de entrevistas en vivo para radio y plataformas digitales.</p>
+          <div class="feature-box__meta">
+            <span>🎙️ Cabina Escuela TGW</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Locutor">Solicitar Cupo</button>
+          </div>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Módulo III • Producción Sonora</span>
+            <span class="feature-box__tag">Certificación</span>
+          </div>
+          <h3>Producción Radiofónica, Guionismo y Podcasting Público</h3>
+          <p>Elaboración de guiones técnicos, montaje musical, operación de consola digital y preparación para la evaluación oficial del Registro de Locutor.</p>
+          <div class="feature-box__meta">
+            <span>🎓 Aval Dirección General TGW</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Actualización del Registro de Locutor">Más Información</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: HUELLAS W (CONALFA, PODCASTS SIN CONTINUIDAD Y ADMINISTRACIONES ANTERIORES) -->
+    <section id="huellas-w">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● MEMORIA INSTITUCIONAL Y REPOSITORIO HISTÓRICO</span>
+          <h2>Huellas W</h2>
+          <p>Apartado diseñado para alojar los contenidos publicados en administraciones anteriores. Aquí encontrarás información educativa como la de CONALFA y series de podcast que no tuvieron continuidad, preservados para acceso ciudadano.</p>
+        </div>
+      </div>
+      <div class="cards-grid-3" id="huellasWContainer"></div>
+    </section>
+
+    <!-- SECCIÓN 6: TRÁMITES A TU FAVOR -->
+    <section id="tramites-favor">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● VENTANILLA ELECTRÓNICA DE SERVICIOS AL CIUDADANO</span>
+          <h2>Trámites a tu Favor</h2>
+          <p>Realiza tus gestiones y registros oficiales ante la Dirección General de Radiodifusión y Televisión Nacional (Radio Nacional TGW) de forma ágil y segura.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid-3">
+        <!-- 1. Registro de Locutor -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #01</span>
+            <span class="feature-box__tag orange">Certificación</span>
+          </div>
+          <h3>Registro de Locutor</h3>
+          <p>Inscripción y acreditación oficial para profesionales de la locución nacional conforme al reglamento de radiodifusión de Guatemala.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: DPI, Constancia de examen vocal</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Locutor">Iniciar Trámite</button>
+          </div>
+        </article>
+
+        <!-- 2. Actualización del Registro de Locutor -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #02</span>
+            <span class="feature-box__tag">Renovación</span>
+          </div>
+          <h3>Actualización del Registro de Locutor</h3>
+          <p>Renovación de carné, actualización de datos personales y revalidación de licencia de locución activa a nivel nacional.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: Número de registro previo y DPI</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Actualización del Registro de Locutor">Actualizar Datos</button>
+          </div>
+        </article>
+
+        <!-- 3. Registro de Técnicos en Radiocomunicación -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #03</span>
+            <span class="feature-box__tag">Ingeniería y RF</span>
+          </div>
+          <h3>Registro de Técnicos en Radiocomunicación</h3>
+          <p>Acreditación para técnicos e ingenieros operadores de plantas transmisoras, enlaces de radiofrecuencia y consolas de radiodifusión.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: Título o diploma técnico y DPI</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Técnicos en Radiocomunicación">Iniciar Trámite</button>
+          </div>
+        </article>
+
+        <!-- 4. Registro de Desaduanaje (Sinónimo formal de Desalmacenaje: Desaduanaje / Liberación Aduanera) -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #04</span>
+            <span class="feature-box__tag orange">Aduanas y Equipos</span>
+          </div>
+          <h3>Registro de Desaduanaje (Liberación Aduanera / Desalmacenaje)</h3>
+          <p>Autorización y registro para el <strong>desaduanaje, liberación aduanera o retiro de almacén fiscal</strong> de equipos transmisores, antenas y repuestos de radiodifusión y televisión.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: Factura, póliza de importación y especificaciones</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Desaduanaje (Liberación Aduanera)">Solicitar Desaduanaje</button>
+          </div>
+        </article>
+
+        <!-- 5. Registro de Comerciales -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #05</span>
+            <span class="feature-box__tag">Pauta Publicitaria</span>
+          </div>
+          <h3>Registro de Comerciales</h3>
+          <p>Inscripción y autorización de cuñas publicitarias, anuncios comerciales y piezas promocionales conforme a las normas de radiodifusión nacional.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: Ficha técnica de audio y locutor registrado</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Comerciales">Registrar Comercial</button>
+          </div>
+        </article>
+
+        <!-- 6. Registro de Radioperiódicos, Noticieros y Programas de Comentarios -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Trámite en Línea #06</span>
+            <span class="feature-box__tag">Espacios Informativos</span>
+          </div>
+          <h3>Registro de Radioperiódicos, Noticieros y Programas de Comentarios</h3>
+          <p>Inscripción oficial de espacios noticiosos, radioperiódicos y programas de opinión o comentarios transmitidos en emisoras del país.</p>
+          <div class="feature-box__meta">
+            <span>Requisitos: Nombre del director, emisora y horario</span>
+            <button type="button" class="btn-primary js-open-procedure" data-proc="Registro de Radioperiódicos, Noticieros y Programas de Comentarios">Registrar Programa</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: VOZ CIUDADANA (INFORMACIÓN PÚBLICA, QUEJAS Y DENUNCIAS, Y SINACIG) -->
+    <section id="voz-ciudadana">
+      <div class="section-header">
+        <div class="section-header__title-group">
+          <span class="eyebrow">● PARTICIPACIÓN, TRANSPARENCIA Y RENDICIÓN DE CUENTAS</span>
+          <h2>Voz Ciudadana</h2>
+          <p>Canales directos de acceso a la Información Pública, recepción de Quejas y Denuncias, y portal informativo del Sistema Nacional de Control Interno Gubernamental (SINACIG).</p>
+        </div>
+      </div>
+
+      <div class="cards-grid-3" style="margin-bottom: 28px;">
+        <!-- Apartado 1: Información Pública -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Decreto 57-2008</span>
+            <span class="feature-box__tag">Transparencia</span>
+          </div>
+          <h3>Información Pública</h3>
+          <p>Unidad de Información Pública de Radio Nacional TGW. Consulta información de oficio (presupuesto, directorio, contrataciones) o ingresa tu solicitud electrónica.</p>
+          <div class="feature-box__meta">
+            <span>Plazo legal de respuesta conforme LAIP</span>
+            <button type="button" class="btn-primary js-citizen-action" data-type="INFORMACION_PUBLICA">Solicitar Información</button>
+          </div>
+        </article>
+
+        <!-- Apartado 2: Quejas y Denuncias -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag live">Canal Confidencial</span>
+            <span class="feature-box__tag orange">Atención Directa</span>
+          </div>
+          <h3>Quejas y Denuncias</h3>
+          <p>Espacio seguro para presentar quejas sobre la prestación de servicios o denuncias administrativas relacionadas con la gestión institucional, con opción de envío anónimo.</p>
+          <div class="feature-box__meta">
+            <span>Protección de identidad y código de seguimiento</span>
+            <button type="button" class="btn-primary orange js-citizen-action" data-type="QUEJA_DENUNCIA">Presentar Queja / Denuncia</button>
+          </div>
+        </article>
+
+        <!-- Apartado 3: Acceso Rápido SINACIG -->
+        <article class="feature-box">
+          <div class="feature-box__top">
+            <span class="feature-box__tag">Control Interno</span>
+            <span class="feature-box__tag">Contraloría / CIV</span>
+          </div>
+          <h3>SINACIG en Radio Nacional TGW</h3>
+          <p>Conoce qué es el Sistema Nacional de Control Interno Gubernamental y cómo garantiza la administración proba y eficiente de los recursos del Estado.</p>
+          <div class="feature-box__meta">
+            <span>Rendición de cuentas permanente</span>
+            <a href="#sinacig-box" class="btn-primary" style="text-decoration: none;">Ver Explicación SINACIG</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- BLOQUE EXPLICATIVO DE SINACIG -->
+      <div class="sinacig-highlight" id="sinacig-box">
+        <div>
+          <span class="inst-card__badge">¿QUÉ ES SINACIG? • SISTEMA NACIONAL DE CONTROL INTERNO GUBERNAMENTAL</span>
+          <h3>SINACIG — Transparencia, Control y Fiscalización de la Gestión Pública</h3>
+          <p>
+            <strong>Espacio informativo sobre los mecanismos de transparencia, control y fiscalización de la gestión pública, orientado a promover la rendición de cuentas y la administración eficiente de los recursos del Estado.</strong>
+          </p>
+          <p>
+            El <strong>Sistema Nacional de Control Interno Gubernamental (SINACIG)</strong>, impulsado en cumplimiento de las normativas de la Contraloría General de Cuentas, establece el conjunto de objetivos, responsabilidades, componentes y normas de control interno que Radio Nacional TGW aplica para identificar riesgos, prevenir actos de corrupción, salvaguardar el patrimonio público y asegurar que cada recurso sirva con eficacia a la ciudadanía guatemalteca.
+          </p>
+        </div>
+
+        <div class="sinacig-highlight__pillars">
+          <div class="pillar">
+            <strong>1. Entorno de Control y Ética</strong>
+            <span>Cumplimiento estricto de los valores institucionales: Integridad, Honestidad y Transparencia.</span>
+          </div>
+          <div class="pillar">
+            <strong>2. Evaluación de Riesgos</strong>
+            <span>Matrices anuales de gestión y prevención de riesgos operativos, técnicos y financieros.</span>
+          </div>
+          <div class="pillar">
+            <strong>3. Actividades de Control</strong>
+            <span>Procesos auditables en contrataciones, activos de radiodifusión y trámites ciudadanos.</span>
+          </div>
+          <div class="pillar">
+            <strong>4. Rendición de Cuentas</strong>
+            <span>Informes públicos periódicos y supervisión continua de la eficiencia de los recursos del Estado.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL 1: LECTURA COMPLETA DE NOTICIA -->
+  <div class="tgw-modal-overlay" id="articleDetailModal">
+    <div class="tgw-modal">
+      <div class="tgw-modal__header">
+        <h3 id="articleModalCategory">Noticias W</h3>
+        <button type="button" data-close-modal="articleDetailModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="tgw-modal__body" id="articleModalContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: PUBLICAR NOTICIA / ENVIAR COLUMNA OPINIÓN W A BASE DE DATOS PRISMA -->
+  <div class="tgw-modal-overlay" id="newArticleModal">
+    <div class="tgw-modal">
+      <div class="tgw-modal__header">
+        <h3>Publicar Noticia o Columna OpiniónW (Base de Datos Prisma)</h3>
+        <button type="button" data-close-modal="newArticleModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="tgw-modal__body">
+        <form class="tgw-form" id="createNewsForm">
+          <div class="form-group">
+            <label for="newsTitle">Titular de la Noticia o Columna *</label>
+            <input type="text" id="newsTitle" required placeholder="Ej: TGW amplía cobertura en el altiplano guatemalteco" />
+          </div>
+          <div class="form-group">
+            <label for="newsCategory">Sección Principal *</label>
+            <select id="newsCategory" required>
+              <option value="GUATEMALA">Noticias W - Guatemala</option>
+              <option value="CULTURA">Noticias W - Cultura, Arte y Música</option>
+              <option value="DEPORTES">Noticias W - Deportes</option>
+              <option value="OPINION_W">OpiniónW (Sujeta a validación del Director General)</option>
+              <option value="INTERNACIONALES">Noticias W Internacionales</option>
+              <option value="CURIOSIDADES">Curiosidades</option>
+            </select>
+          </div>
+          <div class="form-group" id="newsSubcategoryGroup">
+            <label for="newsSubcategory">Subcategoría de Guatemala</label>
+            <select id="newsSubcategory">
+              <option value="EJECUTIVO">Ejecutivo</option>
+              <option value="LEGISLATIVO">Legislativo</option>
+              <option value="JUDICIAL_MP">Judicial – MP</option>
+              <option value="SEGURIDAD">Seguridad</option>
+              <option value="ELECCIONES_2027">Elecciones 2027</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="newsAuthor">Autor / Periodista *</label>
+            <input type="text" id="newsAuthor" required value="Redacción Diario del Aire - TGW" />
+          </div>
+          <div class="form-group">
+            <label for="newsSummary">Resumen / Entrada *</label>
+            <textarea id="newsSummary" rows="2" required placeholder="Síntesis informativa de la nota..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="newsContent">Cuerpo Completo de la Noticia *</label>
+            <textarea id="newsContent" rows="4" required placeholder="Desarrollo completo de la noticia..."></textarea>
+          </div>
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="checkbox" id="newsDirectorValidated" checked />
+              <span>Cuenta con validación del Director General de la radio (Requerido para publicación inmediata en OpiniónW)</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-primary">Guardar en Base de Datos Prisma</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: TRÁMITES A TU FAVOR (FORMULARIO EN LÍNEA) -->
+  <div class="tgw-modal-overlay" id="procedureModal">
+    <div class="tgw-modal">
+      <div class="tgw-modal__header">
+        <h3 id="procedureModalTitle">Trámites a tu Favor — Ventanilla en Línea</h3>
+        <button type="button" data-close-modal="procedureModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="tgw-modal__body">
+        <form class="tgw-form" id="procedureForm">
+          <div class="form-group">
+            <label for="procTypeSelect">Tipo de Trámite *</label>
+            <select id="procTypeSelect" required>
+              <option value="Registro de Locutor">Registro de Locutor</option>
+              <option value="Actualización del Registro de Locutor">Actualización del Registro de Locutor</option>
+              <option value="Registro de Técnicos en Radiocomunicación">Registro de Técnicos en Radiocomunicación</option>
+              <option value="Registro de Desaduanaje (Liberación Aduanera)">Registro de Desaduanaje (Liberación Aduanera / Desalmacenaje)</option>
+              <option value="Registro de Comerciales">Registro de Comerciales</option>
+              <option value="Registro de Radioperiódicos, Noticieros y Programas de Comentarios">Registro de Radioperiódicos, Noticieros y Programas de Comentarios</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="procApplicant">Nombre Completo o Razón Social *</label>
+            <input type="text" id="procApplicant" required placeholder="Nombre completo del solicitante" />
+          </div>
+          <div class="form-group">
+            <label for="procDpi">CUI / DPI o NIT *</label>
+            <input type="text" id="procDpi" required placeholder="Ej: 2456 78901 0101" />
+          </div>
+          <div class="form-group">
+            <label for="procEmail">Correo Electrónico de Notificación *</label>
+            <input type="email" id="procEmail" required placeholder="correo@ejemplo.gt" />
+          </div>
+          <div class="form-group">
+            <label for="procPhone">Teléfono de Contacto</label>
+            <input type="tel" id="procPhone" placeholder="+502 0000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="procDetails">Datos Técnicos / Observaciones de la Solicitud</label>
+            <textarea id="procDetails" rows="3" placeholder="Ingrese número de expediente previo, frecuencia, póliza aduanera o detalles adicionales..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary orange">Enviar Solicitud Oficial</button>
+        </form>
+        <div id="procedureResultBox" style="margin-top: 14px; display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: VOZ CIUDADANA (INFORMACIÓN PÚBLICA / QUEJAS Y DENUNCIAS) -->
+  <div class="tgw-modal-overlay" id="citizenModal">
+    <div class="tgw-modal">
+      <div class="tgw-modal__header">
+        <h3 id="citizenModalTitle">Voz Ciudadana — Gestión en Línea</h3>
+        <button type="button" data-close-modal="citizenModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="tgw-modal__body">
+        <form class="tgw-form" id="citizenForm">
+          <div class="form-group">
+            <label for="citizenType">Apartado *</label>
+            <select id="citizenType" required>
+              <option value="INFORMACION_PUBLICA">Solicitud de Información Pública (LAIP Decreto 57-2008)</option>
+              <option value="QUEJA_DENUNCIA">Quejas y Denuncias Ciudadanas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="citizenName">Nombre del Ciudadano</label>
+            <input type="text" id="citizenName" placeholder="Opcional si marca envío anónimo" />
+          </div>
+          <div class="form-group">
+            <label for="citizenEmail">Correo Electrónico para Respuesta</label>
+            <input type="email" id="citizenEmail" placeholder="ciudadano@ejemplo.gt" />
+          </div>
+          <div class="form-group">
+            <label for="citizenSubject">Asunto *</label>
+            <input type="text" id="citizenSubject" required placeholder="Resumen de su solicitud, queja o denuncia" />
+          </div>
+          <div class="form-group">
+            <label for="citizenMessage">Descripción Detallada *</label>
+            <textarea id="citizenMessage" rows="4" required placeholder="Describa su requerimiento con el mayor detalle posible..."></textarea>
+          </div>
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="checkbox" id="citizenAnonymous" />
+              <span>Presentar de forma confidencial / anónima</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-primary">Registrar en Voz Ciudadana</button>
+        </form>
+        <div id="citizenResultBox" style="margin-top: 14px; display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: CERTIFICADO DE SEGURIDAD SSL/TLS DE PRODUCCIÓN -->
+  <div class="tgw-modal-overlay" id="sslCertModal">
+    <div class="tgw-modal">
+      <div class="tgw-modal__header">
+        <h3>🔒 Certificado de Seguridad X.509 SSL/TLS y Blindaje de Producción</h3>
+        <button type="button" data-close-modal="sslCertModal" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="tgw-modal__body" id="sslCertModalBody">
+        <p>Cargando información criptográfica del certificado activo...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA INSTITUCIONAL -->
+  <footer class="tgw-footer">
+    <div class="tgw-footer__inner">
+      <div>
+        <h4>Radio Nacional TGW «La Voz de Guatemala»</h4>
+        <p>Primera emisora del país fundada el 15 de septiembre de 1930. Declarada Patrimonio Cultural de la Nación mediante Acuerdo Ministerial 459-2012.</p>
+        <p>📍 18 Calle 6-72, Zona 1, 3er Nivel Edificio Tipografía Nacional, Ciudad de Guatemala.</p>
+      </div>
+      <div>
+        <h4>Frecuencias y Cobertura</h4>
+        <ul>
+          <li>• 107.3 FM — Cobertura Central y Metropolitana</li>
+          <li>• 107.5 FM — Red de Repetidoras Nacionales</li>
+          <li>• TGW TV y Streaming Digital Multiplataforma</li>
+          <li>• Cabina Histórica «Martha Bolaños de Prado»</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Espacios Patrimoniales y Transparencia</h4>
+        <ul>
+          <li>• Museo Histórico Otto René Mancilla</li>
+          <li>• Teatro de Bolsillo Mildred Chávez de Almorza</li>
+          <li>• Fonoteca Patrimonial TGW</li>
+          <li>• Portal SINACIG y Unidad de Información Pública</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tgw-footer__bottom">
+      <span>© 2026 Radio Nacional TGW - Ministerio de Comunicaciones, Infraestructura y Vivienda (CIV). Todos los derechos reservados.</span>
+      <span>Arquitectura Escalable: TypeScript • Node.js • Prisma ORM • SCSS/CSS • Certificados SSL/TLS X.509</span>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

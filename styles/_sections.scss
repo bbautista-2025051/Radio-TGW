@@ -1,0 +1,606 @@
+.tgw-main-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--tgw-border);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+
+  &__title-group {
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--tgw-orange-500);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      font-weight: 900;
+      color: var(--tgw-text-primary);
+    }
+
+    p {
+      margin: 6px 0 0;
+      font-size: 0.92rem;
+      color: var(--tgw-text-secondary);
+      max-width: 760px;
+    }
+  }
+}
+
+// Barra de Filtros y Búsqueda de Noticias W
+.news-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--tgw-bg-surface);
+  border: 1px solid var(--tgw-border);
+  border-radius: var(--tgw-radius-md);
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  box-shadow: var(--tgw-shadow-sm);
+
+  &__pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+.filter-chip {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--tgw-border);
+  background: var(--tgw-bg-main);
+  color: var(--tgw-text-secondary);
+  font-family: var(--tgw-font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+
+  &:hover,
+  &.active {
+    background: var(--tgw-blue-500);
+    color: #ffffff;
+    border-color: var(--tgw-blue-500);
+  }
+
+  &.sub-chip {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+  }
+}
+
+.subfilters-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  background: var(--tgw-blue-100);
+  border: 1px solid rgba(30, 111, 217, 0.22);
+  border-radius: 12px;
+  margin-bottom: 22px;
+
+  &__label {
+    font-size: 0.76rem;
+    font-weight: 800;
+    color: var(--tgw-blue-600);
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input {
+    padding: 8px 14px 8px 34px;
+    border-radius: 999px;
+    border: 1px solid var(--tgw-border);
+    background: var(--tgw-bg-main);
+    color: var(--tgw-text-primary);
+    font-family: var(--tgw-font-sans);
+    font-size: 0.82rem;
+    width: 230px;
+    outline: none;
+
+    &:focus {
+      border-color: var(--tgw-blue-500);
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--tgw-text-muted);
+    font-size: 0.85rem;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--tgw-blue-500), var(--tgw-blue-600));
+  color: #ffffff;
+  font-family: var(--tgw-font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(30, 111, 217, 0.3);
+  }
+
+  &.orange {
+    background: linear-gradient(135deg, var(--tgw-orange-400), var(--tgw-orange-500));
+    &:hover {
+      box-shadow: 0 6px 16px rgba(240, 109, 43, 0.35);
+    }
+  }
+}
+
+// Banner de Validación del Director General para OpiniónW
+.director-validation-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: linear-gradient(90deg, rgba(12, 34, 59, 0.96), rgba(24, 95, 184, 0.92));
+  color: #ffffff;
+  border-radius: var(--tgw-radius-md);
+  margin-bottom: 22px;
+  border-left: 5px solid var(--tgw-orange-500);
+
+  &__info {
+    h4 {
+      margin: 0 0 4px;
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+    p {
+      margin: 0;
+      font-size: 0.83rem;
+      color: #d0e3f8;
+    }
+  }
+}
+
+// Grid de Tarjetas de Noticias W
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 24px;
+}
+
+.news-card {
+  background: var(--tgw-bg-surface);
+  border: 1px solid var(--tgw-border);
+  border-radius: var(--tgw-radius-md);
+  overflow: hidden;
+  box-shadow: var(--tgw-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--tgw-shadow-md);
+  }
+
+  &__image-wrap {
+    position: relative;
+    height: 195px;
+    overflow: hidden;
+    background: #102a45;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+  }
+
+  &:hover &__image-wrap img {
+    transform: scale(1.04);
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  &__cat-badge {
+    background: rgba(12, 34, 59, 0.88);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 999px;
+
+    &.sub {
+      background: var(--tgw-orange-500);
+    }
+  }
+
+  &__body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+      line-height: 1.38;
+      font-weight: 800;
+      color: var(--tgw-text-primary);
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 0.87rem;
+      line-height: 1.58;
+      color: var(--tgw-text-secondary);
+      flex: 1;
+    }
+  }
+
+  &__validated {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #13795b;
+    background: rgba(41, 199, 148, 0.14);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--tgw-border);
+    font-size: 0.76rem;
+    color: var(--tgw-text-muted);
+
+    button.read-more-btn {
+      background: transparent;
+      border: none;
+      color: var(--tgw-blue-500);
+      font-family: var(--tgw-font-sans);
+      font-weight: 800;
+      font-size: 0.8rem;
+      cursor: pointer;
+      padding: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Tarjetas de Programación W (TGW FM & TGW TV), Agenda Cultural, Huellas W, Trámites y Voz Ciudadana
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background: var(--tgw-bg-surface);
+  border: 1px solid var(--tgw-border);
+  border-radius: var(--tgw-radius-md);
+  padding: 22px;
+  box-shadow: var(--tgw-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--tgw-blue-400);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--tgw-blue-100);
+    color: var(--tgw-blue-600);
+
+    &.live {
+      background: rgba(230, 57, 53, 0.14);
+      color: var(--tgw-red-live);
+    }
+
+    &.orange {
+      background: rgba(240, 109, 43, 0.14);
+      color: var(--tgw-orange-500);
+    }
+  }
+
+  h3 {
+    margin: 4px 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--tgw-text-primary);
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.87rem;
+    line-height: 1.56;
+    color: var(--tgw-text-secondary);
+    flex: 1;
+  }
+
+  &__meta {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--tgw-text-muted);
+    padding-top: 10px;
+    border-top: 1px solid var(--tgw-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+// Bloque Especial SINACIG y Voz Ciudadana
+.sinacig-highlight {
+  background: linear-gradient(135deg, #0b2239 0%, #153c66 100%);
+  color: #ffffff;
+  border-radius: var(--tgw-radius-lg);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: center;
+  box-shadow: var(--tgw-shadow-md);
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+
+  h3 {
+    margin: 6px 0 12px;
+    font-size: 1.4rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0 0 14px;
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: #d6e6f9;
+  }
+
+  &__pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    .pillar {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 14px;
+
+      strong {
+        display: block;
+        font-size: 0.84rem;
+        color: #f6884e;
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 0.78rem;
+        color: #e1ecf7;
+      }
+    }
+  }
+}
+
+// Modales Interactivos (Lectura de Noticia, Envío de Trámites, Voz Ciudadana y Certificado SSL)
+.tgw-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 24, 43, 0.68);
+  backdrop-filter: blur(4px);
+  z-index: 2200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  &.open {
+    display: flex;
+  }
+}
+
+.tgw-modal {
+  background: var(--tgw-bg-surface);
+  color: var(--tgw-text-primary);
+  width: min(680px, 96vw);
+  max-height: 90vh;
+  border-radius: var(--tgw-radius-lg);
+  border: 1px solid var(--tgw-border);
+  box-shadow: var(--tgw-shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 18px 24px;
+    background: var(--tgw-navy-800);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.12);
+      border: none;
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    padding: 24px;
+    overflow-y: auto;
+  }
+}
+
+.tgw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--tgw-text-primary);
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px 13px;
+      border-radius: 10px;
+      border: 1px solid var(--tgw-border);
+      background: var(--tgw-bg-main);
+      color: var(--tgw-text-primary);
+      font-family: var(--tgw-font-sans);
+      font-size: 0.88rem;
+    }
+  }
+}
+
+// Pie de Página Institucional
+.tgw-footer {
+  background: #08182b;
+  color: #c9d9ec;
+  padding: 44px 20px 28px;
+  border-top: 4px solid var(--tgw-orange-500);
+
+  &__inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 28px;
+  }
+
+  h4 {
+    color: #ffffff;
+    margin: 0 0 12px;
+    font-size: 0.96rem;
+  }
+
+  p,
+  li {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    color: #9ab3ce;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__bottom {
+    max-width: 1320px;
+    margin: 28px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.78rem;
+    color: #7c97b6;
+  }
+}
